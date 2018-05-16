@@ -13,7 +13,7 @@ class Index_cnt extends CI_Controller {
 //		$data = $this->index_model->dbdate();
 //		$this->index_model->disassembl($data);
 			//viewの呼び出し
-			$this->load->view('index',$data);
+			$this->load->view('index');
 		
 		
 	}
