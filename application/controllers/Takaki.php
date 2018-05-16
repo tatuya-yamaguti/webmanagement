@@ -20,5 +20,5 @@ class Takaki extends CI_Controller {
 		//viewの呼び出し
 		$this->load->view('oruga',$data);
 	}	
-	
+	tukareta
 }
