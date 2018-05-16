@@ -1,1 +1,2 @@
 # webmanagement
+#ヤマグチによる更新
