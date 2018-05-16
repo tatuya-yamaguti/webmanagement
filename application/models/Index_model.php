@@ -5,9 +5,10 @@ class Index_model extends CI_Model {
 		parent::__construct();
     }
     
-	public function dbdate(){
+	public function dbdate($userId, $passwd){
 		//dbからデータの読み込み
-        $dbresult = $this->db->query('select userId, name from users where userId =?, password =?'); 
+		$passwd = sha1($passwd); 
+        $dbresult = $this->db->query('select userId, name from users where userId =?, password =?',array($userId, $passwd)); 
         $data['dbdata'] = $dbresult->result_array();     
         return $data;
 	}
