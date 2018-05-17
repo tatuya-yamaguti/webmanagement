@@ -8,9 +8,9 @@ class Index_model extends CI_Model {
 	public function dbdate($userId, $passwd){
 		//dbからデータの読み込み
 		$passwd = sha1($passwd); 
-        $dbresult = $this->db->query('select userId, name from users where userId =?, password =?',array($userId, $passwd)); 
-        $data['dbdata'] = $dbresult->result_array();     
-        return $data;
+        $dbresult = $this->db->query('select userId, name from users where userId =? and password =?',array($userId, $passwd)); 
+        return $dbresult->result_array();
+
 	}
 
 	//二次元配列分解
